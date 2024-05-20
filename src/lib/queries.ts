@@ -349,7 +349,7 @@ export const upsertSubAccount = async (subAccount: SubAccount) => {
             link: `/subaccount/${subAccount.id}/settings`,
           },
           {
-            name: 'Funnels',
+            name: 'Page Builder',
             icon: 'pipelines',
             link: `/subaccount/${subAccount.id}/funnels`,
           },
@@ -364,7 +364,7 @@ export const upsertSubAccount = async (subAccount: SubAccount) => {
             link: `/subaccount/${subAccount.id}/automations`,
           },
           {
-            name: 'Pipelines',
+            name: 'Work Flow',
             icon: 'flag',
             link: `/subaccount/${subAccount.id}/pipelines`,
           },

@@ -138,7 +138,7 @@ const Page = async ({
           </Card>
           <Card className="flex-1 relative">
             <CardHeader>
-              <CardDescription>Potential Income</CardDescription>
+              <CardDescription>Pending Income</CardDescription>
               <CardTitle className="text-4xl">
                 {potentialIncome
                   ? `${currency} ${potentialIncome.toFixed(2)}`

@@ -197,7 +197,7 @@ const TicketForm = ({ getNewTicket, laneId, subaccountId }: Props) => {
               name="value"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Ticket Value</FormLabel>
+                  <FormLabel>Ticket Price</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Value"

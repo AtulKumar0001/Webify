@@ -97,7 +97,7 @@ const CreatePipelineForm: React.FC<CreatePipelineFormProps> = ({
   return (
     <Card className="w-full ">
       <CardHeader>
-        <CardTitle>Pipeline Details</CardTitle>
+        <CardTitle>Workflow Details</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -111,7 +111,7 @@ const CreatePipelineForm: React.FC<CreatePipelineFormProps> = ({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Pipeline Name</FormLabel>
+                  <FormLabel>Workflow Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Name"

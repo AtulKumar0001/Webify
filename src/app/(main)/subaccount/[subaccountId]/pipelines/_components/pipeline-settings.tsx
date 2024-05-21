@@ -34,7 +34,7 @@ const PipelineSettings = ({
       <div>
         <div className="flex items-center justify-between mb-4">
           <AlertDialogTrigger asChild>
-            <Button variant={'destructive'}>Delete Pipeline</Button>
+            <Button variant={'destructive'}>Delete Workflow</Button>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>

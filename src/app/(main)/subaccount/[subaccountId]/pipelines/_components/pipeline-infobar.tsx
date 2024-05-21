@@ -95,7 +95,7 @@ const PipelineInfoBar = ({ pipelineId, pipelines, subAccountId }: Props) => {
                   onClick={handleClickCreatePipeline}
                 >
                   <Plus size={15} />
-                  Create Pipeline
+                  Create Workflow
                 </Button>
               </CommandGroup>
             </Command>

@@ -72,7 +72,7 @@ const PipelineValue = ({ subaccountId }: Props) => {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs text-muted-foreground">
-              Open ${pipelineClosedValue}
+              Successful ${pipelineClosedValue}
             </p>
           </div>
           <div>

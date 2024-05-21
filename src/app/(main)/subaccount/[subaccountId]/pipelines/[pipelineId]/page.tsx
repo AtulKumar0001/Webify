@@ -42,7 +42,7 @@ const PipelinePage = async ({ params }: Props) => {
           pipelines={pipelines}
         />
         <div>
-          <TabsTrigger value="view">Pipeline View</TabsTrigger>
+          <TabsTrigger value="view">Workflow View</TabsTrigger>
           <TabsTrigger value="settings">Settings</TabsTrigger>
         </div>
       </TabsList>

@@ -480,6 +480,7 @@ export const sendInvitation = async (
   })
 
   try {
+    console.log("Responsee",resposne)
     const invitation = await clerkClient.invitations.createInvitation({
       emailAddress: email,
       redirectUrl: process.env.NEXT_PUBLIC_URL,

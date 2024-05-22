@@ -103,7 +103,7 @@ const FunnelSteps = ({ funnel, funnelId, pages, subaccountId }: Props) => {
           <ScrollArea className="h-full ">
             <div className="flex gap-4 items-center">
               <Check />
-              Funnel Steps
+               Steps
             </div>
             {pagesState.length ? (
               <DragDropContext

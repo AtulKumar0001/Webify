@@ -79,13 +79,13 @@ const FunnelForm: React.FC<CreateFunnelProps> = ({
     if (response)
       toast({
         title: 'Success',
-        description: 'Saved funnel details',
+        description: 'Saved Page details',
       })
     else
       toast({
         variant: 'destructive',
         title: 'Oppse!',
-        description: 'Could not save funnel details',
+        description: 'Could not save Page details',
       })
     setClose()
     router.refresh()
@@ -93,7 +93,7 @@ const FunnelForm: React.FC<CreateFunnelProps> = ({
   return (
     <Card className="flex-1">
       <CardHeader>
-        <CardTitle>Funnel Details</CardTitle>
+        <CardTitle>Page Details</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -107,7 +107,7 @@ const FunnelForm: React.FC<CreateFunnelProps> = ({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Funnel Name</FormLabel>
+                  <FormLabel>Page Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Name"
@@ -123,10 +123,10 @@ const FunnelForm: React.FC<CreateFunnelProps> = ({
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Funnel Description</FormLabel>
+                  <FormLabel>Page Description</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Tell us a little bit more about this funnel."
+                      placeholder="Tell us a little bit more about this Page."
                       {...field}
                     />
                   </FormControl>
@@ -142,7 +142,7 @@ const FunnelForm: React.FC<CreateFunnelProps> = ({
                   <FormLabel>Sub domain</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Sub domain for funnel"
+                      placeholder="Sub domain for Page"
                       {...field}
                     />
                   </FormControl>

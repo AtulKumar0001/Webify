@@ -86,13 +86,13 @@ const CreateFunnelPage: React.FC<CreateFunnelPageProps> = ({
 
       await saveActivityLogsNotification({
         agencyId: undefined,
-        description: `Updated a funnel page | ${response?.name}`,
+        description: `Updated a page | ${response?.name}`,
         subaccountId: subaccountId,
       })
 
       toast({
         title: 'Success',
-        description: 'Saves Funnel Page Details',
+        description: 'Saves Page Details',
       })
       router.refresh()
     } catch (error) {
@@ -108,9 +108,9 @@ const CreateFunnelPage: React.FC<CreateFunnelPageProps> = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Funnel Page</CardTitle>
+        <CardTitle>Page</CardTitle>
         <CardDescription>
-          Funnel pages are flow in the order they are created by default. You
+          You
           can move them around to change their order.
         </CardDescription>
       </CardHeader>

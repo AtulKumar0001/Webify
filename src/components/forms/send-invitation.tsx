@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { z } from "zod";
 import {
   Card,
@@ -35,7 +35,19 @@ interface SendInvitationProps {
   agencyId: string;
 }
 
+interface FormState {
+  name: string;
+  email: string;
+}
+
 const SendInvitation: React.FC<SendInvitationProps> = ({ agencyId }) => {
+
+  const [formState, setFormState] = useState<FormState>({
+    name: 'demo',
+    email: 'atulkumar86281@gmail.com',
+  });
+
+
   const { toast } = useToast();
   const userDataSchema = z.object({
     email: z.string().email(),
@@ -54,13 +66,23 @@ const SendInvitation: React.FC<SendInvitationProps> = ({ agencyId }) => {
   const onSubmit = async (values: z.infer<typeof userDataSchema>) => {
     try {
       const res = await sendInvitation(values.role, values.email, agencyId);
-      console.log("resss",res);
-      console.log("valuess",values);
+     
       await saveActivityLogsNotification({
         agencyId: agencyId,
         description: `Invited ${res.email}`,
         subaccountId: undefined,
       });
+
+
+      const resp = await fetch('/api/Invite_email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+      console.log("Ressssssssss",resp)
+
       toast({
         title: "Success",
         description: "Created and sent invitation",
@@ -74,6 +96,10 @@ const SendInvitation: React.FC<SendInvitationProps> = ({ agencyId }) => {
       });
     }
   };
+
+
+
+  
 
   return (
     <Card>
